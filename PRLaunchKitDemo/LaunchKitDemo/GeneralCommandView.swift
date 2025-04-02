@@ -25,14 +25,15 @@ struct GeneralCommandView: View {
                 ForEach(0..<4) { index in
                     HStack {
                         if #available(iOS 17.0, *) {
-                            TextField("Name", text: $parameters[index].name).containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0).minimumScaleFactor(0.5)
+                            TextField("Name", text: $parameters[index].name).containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0).minimumScaleFactor(0.5).textInputAutocapitalization(.never)
                         }
                         else {
                             TextField("Name", text: $parameters[index].name)
                         }
 
                         Divider()
-                        TextField("Value", text: $parameters[index].value, axis: .vertical).lineLimit(1...3)
+                        TextField("Value", text: $parameters[index].value, axis: .vertical)
+                            .lineLimit(1...3).textInputAutocapitalization(.never)
                     }
                 }
             }
