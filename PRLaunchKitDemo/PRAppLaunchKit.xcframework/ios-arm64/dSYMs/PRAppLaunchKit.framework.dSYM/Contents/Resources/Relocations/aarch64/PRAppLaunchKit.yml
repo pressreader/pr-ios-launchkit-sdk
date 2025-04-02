@@ -1,0 +1,77 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vitalibounine/Library/Developer/Xcode/DerivedData/PRAppLaunchKit-bidicicrphxefkbtxxiuuaupxcph/Build/Intermediates.noindex/ArchiveIntermediates/PRAppLaunchKit/InstallationBuildProductsLocation/Library/Frameworks/PRAppLaunchKit.framework/PRAppLaunchKit'
+relocations:
+  - { offset: 0x5FA15, size: 0x8, addend: 0x0, symName: _PRAppLaunchKitVersionString, symObjAddr: 0x0, symBinAddr: 0x8B80, symSize: 0x0 }
+  - { offset: 0x5FA4A, size: 0x8, addend: 0x0, symName: _PRAppLaunchKitVersionNumber, symObjAddr: 0x40, symBinAddr: 0x8BC0, symSize: 0x0 }
+  - { offset: 0x5FA87, size: 0x8, addend: 0x0, symName: '+[PRAppLaunchKit defaultAppLaunch]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x40 }
+  - { offset: 0x5FA95, size: 0x8, addend: 0x0, symName: '+[PRAppLaunchKit defaultAppLaunch]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x40 }
+  - { offset: 0x5FABF, size: 0x8, addend: 0x0, symName: _defaultAppLaunch._appLaunch, symObjAddr: 0xEF78, symBinAddr: 0xDC10, symSize: 0x0 }
+  - { offset: 0x5FAD5, size: 0x8, addend: 0x0, symName: _defaultAppLaunch.onceToken, symObjAddr: 0xEF80, symBinAddr: 0xDC18, symSize: 0x0 }
+  - { offset: 0x5FBC0, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit idfa]', symObjAddr: 0x1864, symBinAddr: 0x5864, symSize: 0x90 }
+  - { offset: 0x5FC25, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit discoverBaseApiUrl:]', symObjAddr: 0x1900, symBinAddr: 0x5900, symSize: 0x160 }
+  - { offset: 0x5FC4D, size: 0x8, addend: 0x0, symName: '_discoverBaseApiUrl:.urlIndex', symObjAddr: 0xEF88, symBinAddr: 0xDC20, symSize: 0x0 }
+  - { offset: 0x5FC92, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit requestBaseUrlFromDiscoveryUrl:completed:]', symObjAddr: 0x1C24, symBinAddr: 0x5C24, symSize: 0x1B0 }
+  - { offset: 0x5FD47, size: 0x8, addend: 0x0, symName: '+[PRAppLaunchKit discoveryURLs]', symObjAddr: 0x217C, symBinAddr: 0x617C, symSize: 0x40 }
+  - { offset: 0x5FD73, size: 0x8, addend: 0x0, symName: _discoveryURLs._discoveryURLs, symObjAddr: 0xEF90, symBinAddr: 0xDC28, symSize: 0x0 }
+  - { offset: 0x5FD8A, size: 0x8, addend: 0x0, symName: _discoveryURLs.onceToken, symObjAddr: 0xEF98, symBinAddr: 0xDC30, symSize: 0x0 }
+  - { offset: 0x5FE1B, size: 0x8, addend: 0x0, symName: '___34+[PRAppLaunchKit defaultAppLaunch]_block_invoke', symObjAddr: 0x40, symBinAddr: 0x4040, symSize: 0x2C }
+  - { offset: 0x5FE42, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit initWithScheme:hostName:appStoreID:]', symObjAddr: 0x6C, symBinAddr: 0x406C, symSize: 0xBC }
+  - { offset: 0x5FEA9, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit initWithScheme:]', symObjAddr: 0x128, symBinAddr: 0x4128, symSize: 0x14 }
+  - { offset: 0x5FEEE, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit init]', symObjAddr: 0x13C, symBinAddr: 0x413C, symSize: 0xC }
+  - { offset: 0x5FF25, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit isAppInstalled]', symObjAddr: 0x148, symBinAddr: 0x4148, symSize: 0x74 }
+  - { offset: 0x5FF5C, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit launchAppWithURLParameters:]', symObjAddr: 0x1BC, symBinAddr: 0x41BC, symSize: 0x10 }
+  - { offset: 0x5FF9D, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit baseApiURL]', symObjAddr: 0x1CC, symBinAddr: 0x41CC, symSize: 0x18 }
+  - { offset: 0x5FFD4, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit startBackgroundTask]', symObjAddr: 0x1E4, symBinAddr: 0x41E4, symSize: 0x108 }
+  - { offset: 0x6002F, size: 0x8, addend: 0x0, symName: '___37-[PRAppLaunchKit startBackgroundTask]_block_invoke', symObjAddr: 0x2EC, symBinAddr: 0x42EC, symSize: 0x3C }
+  - { offset: 0x6007A, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32r40w, symObjAddr: 0x328, symBinAddr: 0x4328, symSize: 0x38 }
+  - { offset: 0x600A3, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32r40w, symObjAddr: 0x360, symBinAddr: 0x4360, symSize: 0x2C }
+  - { offset: 0x600C2, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit cleanBackgroundTask:]', symObjAddr: 0x38C, symBinAddr: 0x438C, symSize: 0x58 }
+  - { offset: 0x6012A, size: 0x8, addend: 0x0, symName: '___38-[PRAppLaunchKit cleanBackgroundTask:]_block_invoke', symObjAddr: 0x3E4, symBinAddr: 0x43E4, symSize: 0x64 }
+  - { offset: 0x60165, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit launchAppWithCommand:URLParameters:]', symObjAddr: 0x448, symBinAddr: 0x4448, symSize: 0x8 }
+  - { offset: 0x601B2, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit launchAppWithCommand:URLParameters:forceSendingToServer:]', symObjAddr: 0x450, symBinAddr: 0x4450, symSize: 0x4A4 }
+  - { offset: 0x60263, size: 0x8, addend: 0x0, symName: '___74-[PRAppLaunchKit launchAppWithCommand:URLParameters:forceSendingToServer:]_block_invoke', symObjAddr: 0x8F4, symBinAddr: 0x48F4, symSize: 0x34 }
+  - { offset: 0x602BA, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x928, symBinAddr: 0x4928, symSize: 0xC }
+  - { offset: 0x602E3, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x934, symBinAddr: 0x4934, symSize: 0x8 }
+  - { offset: 0x60302, size: 0x8, addend: 0x0, symName: '___74-[PRAppLaunchKit launchAppWithCommand:URLParameters:forceSendingToServer:]_block_invoke.27', symObjAddr: 0x93C, symBinAddr: 0x493C, symSize: 0x34 }
+  - { offset: 0x60359, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit installApp]', symObjAddr: 0x970, symBinAddr: 0x4970, symSize: 0xCC }
+  - { offset: 0x6039C, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit requestApiWithEntryPoint:command:arguments:completed:]', symObjAddr: 0xA3C, symBinAddr: 0x4A3C, symSize: 0x1B0 }
+  - { offset: 0x6041F, size: 0x8, addend: 0x0, symName: '___71-[PRAppLaunchKit requestApiWithEntryPoint:command:arguments:completed:]_block_invoke', symObjAddr: 0xBEC, symBinAddr: 0x4BEC, symSize: 0x1AC }
+  - { offset: 0x604E5, size: 0x8, addend: 0x0, symName: '___71-[PRAppLaunchKit requestApiWithEntryPoint:command:arguments:completed:]_block_invoke_2', symObjAddr: 0xD98, symBinAddr: 0x4D98, symSize: 0x134 }
+  - { offset: 0x605B3, size: 0x8, addend: 0x0, symName: '___71-[PRAppLaunchKit requestApiWithEntryPoint:command:arguments:completed:]_block_invoke_3', symObjAddr: 0xECC, symBinAddr: 0x4ECC, symSize: 0x14 }
+  - { offset: 0x60614, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32b, symObjAddr: 0xEE0, symBinAddr: 0x4EE0, symSize: 0x10 }
+  - { offset: 0x6063D, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0xEF0, symBinAddr: 0x4EF0, symSize: 0x8 }
+  - { offset: 0x6065C, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s56b64w, symObjAddr: 0xEF8, symBinAddr: 0x4EF8, symSize: 0x50 }
+  - { offset: 0x60685, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56s64w, symObjAddr: 0xF48, symBinAddr: 0x4F48, symSize: 0x40 }
+  - { offset: 0x606A4, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit requestWithBaseUrl:entryPoint:command:arguments:completed:]', symObjAddr: 0xF88, symBinAddr: 0x4F88, symSize: 0x44C }
+  - { offset: 0x607C7, size: 0x8, addend: 0x0, symName: '___76-[PRAppLaunchKit requestWithBaseUrl:entryPoint:command:arguments:completed:]_block_invoke', symObjAddr: 0x13D4, symBinAddr: 0x53D4, symSize: 0xB8 }
+  - { offset: 0x60886, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit launchURL]', symObjAddr: 0x148C, symBinAddr: 0x548C, symSize: 0x10 }
+  - { offset: 0x608BB, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit launchURLWithCommand:arguments:]', symObjAddr: 0x149C, symBinAddr: 0x549C, symSize: 0x1F0 }
+  - { offset: 0x60951, size: 0x8, addend: 0x0, symName: '___49-[PRAppLaunchKit launchURLWithCommand:arguments:]_block_invoke', symObjAddr: 0x168C, symBinAddr: 0x568C, symSize: 0x12C }
+  - { offset: 0x609E7, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0x17B8, symBinAddr: 0x57B8, symSize: 0x28 }
+  - { offset: 0x60A10, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0x17E0, symBinAddr: 0x57E0, symSize: 0x28 }
+  - { offset: 0x60A2F, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit deviceId]', symObjAddr: 0x1808, symBinAddr: 0x5808, symSize: 0x5C }
+  - { offset: 0x60A8D, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit openIDFA]', symObjAddr: 0x18F4, symBinAddr: 0x58F4, symSize: 0xC }
+  - { offset: 0x60AC1, size: 0x8, addend: 0x0, symName: '___37-[PRAppLaunchKit discoverBaseApiUrl:]_block_invoke', symObjAddr: 0x1A60, symBinAddr: 0x5A60, symSize: 0x164 }
+  - { offset: 0x60B7E, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32b40w, symObjAddr: 0x1BC4, symBinAddr: 0x5BC4, symSize: 0x38 }
+  - { offset: 0x60BA7, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40w, symObjAddr: 0x1BFC, symBinAddr: 0x5BFC, symSize: 0x28 }
+  - { offset: 0x60BC6, size: 0x8, addend: 0x0, symName: '___59-[PRAppLaunchKit requestBaseUrlFromDiscoveryUrl:completed:]_block_invoke', symObjAddr: 0x1DD4, symBinAddr: 0x5DD4, symSize: 0x110 }
+  - { offset: 0x60CBA, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48b, symObjAddr: 0x1EE4, symBinAddr: 0x5EE4, symSize: 0x3C }
+  - { offset: 0x60CE3, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s, symObjAddr: 0x1F20, symBinAddr: 0x5F20, symSize: 0x30 }
+  - { offset: 0x60D02, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit baseHostURLWithResponse:]', symObjAddr: 0x1F50, symBinAddr: 0x5F50, symSize: 0xD8 }
+  - { offset: 0x60DFA, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit performXpathQuery:withDocument:]', symObjAddr: 0x2028, symBinAddr: 0x6028, symSize: 0x154 }
+  - { offset: 0x60FA6, size: 0x8, addend: 0x0, symName: '___31+[PRAppLaunchKit discoveryURLs]_block_invoke', symObjAddr: 0x21BC, symBinAddr: 0x61BC, symSize: 0x2B8 }
+  - { offset: 0x60FCF, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit subscriptionKey]', symObjAddr: 0x2474, symBinAddr: 0x6474, symSize: 0x8 }
+  - { offset: 0x61006, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit setSubscriptionKey:]', symObjAddr: 0x247C, symBinAddr: 0x647C, symSize: 0x8 }
+  - { offset: 0x61045, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit scheme]', symObjAddr: 0x2484, symBinAddr: 0x6484, symSize: 0x8 }
+  - { offset: 0x6107C, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit setScheme:]', symObjAddr: 0x248C, symBinAddr: 0x648C, symSize: 0x8 }
+  - { offset: 0x610BB, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit hostName]', symObjAddr: 0x2494, symBinAddr: 0x6494, symSize: 0x8 }
+  - { offset: 0x610F2, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit setHostName:]', symObjAddr: 0x249C, symBinAddr: 0x649C, symSize: 0x8 }
+  - { offset: 0x61131, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit appStoreID]', symObjAddr: 0x24A4, symBinAddr: 0x64A4, symSize: 0x8 }
+  - { offset: 0x61168, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit setAppStoreID:]', symObjAddr: 0x24AC, symBinAddr: 0x64AC, symSize: 0x8 }
+  - { offset: 0x611A7, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit setBaseApiURL:]', symObjAddr: 0x24B4, symBinAddr: 0x64B4, symSize: 0x8 }
+  - { offset: 0x611E6, size: 0x8, addend: 0x0, symName: '-[PRAppLaunchKit .cxx_destruct]', symObjAddr: 0x24BC, symBinAddr: 0x64BC, symSize: 0x54 }
+  - { offset: 0x61AA9, size: 0x8, addend: 0x0, symName: '+[OpenIDFA sameDayOpenIDFA]', symObjAddr: 0x0, symBinAddr: 0x6510, symSize: 0x50 }
+  - { offset: 0x61ACD, size: 0x8, addend: 0x0, symName: '+[OpenIDFA sameDayOpenIDFA]', symObjAddr: 0x0, symBinAddr: 0x6510, symSize: 0x50 }
+  - { offset: 0x61B00, size: 0x8, addend: 0x0, symName: '+[OpenIDFA threeDaysOpenIDFAArray]', symObjAddr: 0x50, symBinAddr: 0x6560, symSize: 0x13D0 }
+...

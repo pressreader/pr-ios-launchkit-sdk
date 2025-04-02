@@ -1,0 +1,6 @@
+framework module PRAppLaunchKit {
+  umbrella header "PRAppLaunchKit.h"
+  export *
+
+  module * { export * }
+}
