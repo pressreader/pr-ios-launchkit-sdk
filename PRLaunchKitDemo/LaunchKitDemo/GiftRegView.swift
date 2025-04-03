@@ -28,8 +28,8 @@ struct GiftRegView: View {
                 
                 TextField("Gift ID", text: $giftID).minimumScaleFactor(0.5)
                 
-                Stepper("Duration: *^[\(duration) hour](inflection: true)*",
-                        value: $duration, in: 0...24)
+                Stepper("Duration: *^[\(duration) hour](inflect: true)*",
+                        value: $duration, in: 1...24)
             }
             
             Section("Calculated Token") {
