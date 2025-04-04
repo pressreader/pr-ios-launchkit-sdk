@@ -24,14 +24,10 @@ struct GeneralCommandView: View {
             Section("Parameters") {
                 ForEach(0..<4) { index in
                     HStack {
-                        if #available(iOS 17.0, *) {
-                            TextField("Name", text: $parameters[index].name).containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0).minimumScaleFactor(0.5).textInputAutocapitalization(.never)
-                        }
-                        else {
-                            TextField("Name", text: $parameters[index].name)
-                        }
-
+                        TextField("Name", text: $parameters[index].name).containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0).minimumScaleFactor(0.5).textInputAutocapitalization(.never)
+                        
                         Divider()
+                        
                         TextField("Value", text: $parameters[index].value, axis: .vertical)
                             .lineLimit(1...3).textInputAutocapitalization(.never)
                     }
@@ -49,7 +45,7 @@ struct GeneralCommandView: View {
                 }
             }
         }
-        .onChange(of: scheme) { newValue in
+        .onChange(of: scheme) { _, newValue in
             PRAppLaunchKit.defaultAppLaunch().scheme = newValue.rawValue
             isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
         }

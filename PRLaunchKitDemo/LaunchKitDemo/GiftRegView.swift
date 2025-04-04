@@ -24,9 +24,9 @@ struct GiftRegView: View {
                 TextField("Site ID", value: $siteID, formatter: NumberFormatter())
                     .keyboardType(.numberPad)
 
-                SecureField("Secret", text: $secret)
+                SecureField("Secret", text: $secret).textInputAutocapitalization(.never)
                 
-                TextField("Gift ID", text: $giftID).minimumScaleFactor(0.5)
+                TextField("Gift ID", text: $giftID).minimumScaleFactor(0.5).textInputAutocapitalization(.never)
                 
                 Stepper("Duration: *^[\(duration) hour](inflect: true)*",
                         value: $duration, in: 1...24)
@@ -50,11 +50,11 @@ struct GiftRegView: View {
             }
         }
         .navigationTitle("Gift Registration")
-        .onChange(of: siteID) { _ in updateToken() }
-        .onChange(of: secret) { _ in updateToken() }
-        .onChange(of: giftID) { _ in updateToken() }
-        .onChange(of: duration) { _ in updateToken() }
-        .onChange(of: scheme) { newValue in
+        .onChange(of: siteID) { updateToken() }
+        .onChange(of: secret) { updateToken() }
+        .onChange(of: giftID) { updateToken() }
+        .onChange(of: duration) { updateToken() }
+        .onChange(of: scheme) { _, newValue in
             PRAppLaunchKit.defaultAppLaunch().scheme = newValue.rawValue
             isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
         }
