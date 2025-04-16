@@ -3,10 +3,10 @@ import PRAppLaunchKit
 
 struct GeneralCommandView: View {
 
-    @State private var scheme = Scheme(rawValue: PRAppLaunchKit.defaultAppLaunch().scheme) ?? .pressreader
+    @Binding var scheme: Scheme
     @State private var command = ""
     @State private var parameters: [(name: String, value: String)] = Array(repeating: ("", ""), count: 4)
-    @State private var isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
+    @Binding var isInstalled: Bool
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -53,10 +53,6 @@ struct GeneralCommandView: View {
                 }
             }
         }
-        .onChange(of: scheme) { _, newValue in
-            PRAppLaunchKit.defaultAppLaunch().scheme = newValue.rawValue
-            isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
-        }
         .navigationTitle("Generic Command")
     }
     
@@ -72,5 +68,5 @@ struct GeneralCommandView: View {
 }
 
 #Preview {
-    GeneralCommandView()
+    GeneralCommandView(scheme: .constant(.pressreader), isInstalled: .constant(true))
 }

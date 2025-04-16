@@ -3,13 +3,13 @@ import PRAppLaunchKit
 import CryptoKit
 
 struct GiftRegView: View {
-    @State private var scheme = Scheme(rawValue: PRAppLaunchKit.defaultAppLaunch().scheme) ?? .pressreader
+    @Binding var scheme: Scheme
     @State private var siteID: Int? = nil
     @State private var secret = ""
     @State private var giftID = UUID().uuidString
     @State private var duration = 1
     @State private var currentToken = ""
-    @State private var isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
+    @Binding var isInstalled: Bool
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -54,10 +54,6 @@ struct GiftRegView: View {
         .onChange(of: secret) { updateToken() }
         .onChange(of: giftID) { updateToken() }
         .onChange(of: duration) { updateToken() }
-        .onChange(of: scheme) { _, newValue in
-            PRAppLaunchKit.defaultAppLaunch().scheme = newValue.rawValue
-            isInstalled = PRAppLaunchKit.defaultAppLaunch().isAppInstalled()
-        }
     }
     
     private func updateToken() {
@@ -147,5 +143,9 @@ extension Data {
 }
 
 #Preview {
-    GiftRegView()
+    @Previewable @State var isInstalled: Bool = PRAppLaunchKit.defaultAppLaunch().scheme == "pressreader"
+    @Previewable @State var scheme = Scheme(rawValue: PRAppLaunchKit.defaultAppLaunch().scheme) ?? .pressreader
+    GiftRegView(scheme: $scheme, isInstalled: $isInstalled).onChange(of: scheme) {
+        isInstalled = scheme == .pressreader
+    }
 }
