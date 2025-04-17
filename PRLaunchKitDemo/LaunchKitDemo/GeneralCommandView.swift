@@ -18,7 +18,7 @@ struct GeneralCommandView: View {
             }
 
             Section("Deep-Link Command") {
-                TextField("Enter command", text: $command)
+                TextField("Enter command", text: $command).textInputAutocapitalization(.never)
             }
             
             Section("Parameters") {
