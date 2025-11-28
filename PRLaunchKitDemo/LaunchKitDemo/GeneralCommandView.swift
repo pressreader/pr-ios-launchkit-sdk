@@ -18,18 +18,26 @@ struct GeneralCommandView: View {
             }
 
             Section("Deep-Link Command") {
-                TextField("Enter command", text: $command).textInputAutocapitalization(.never)
+                TextField("Enter command", text: $command)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
             }
             
             Section("Parameters") {
                 ForEach(0..<4) { index in
                     HStack {
-                        TextField("Name", text: $parameters[index].name).containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0).minimumScaleFactor(0.5).textInputAutocapitalization(.never)
-                        
+                        TextField("Name", text: $parameters[index].name)
+                            .containerRelativeFrame(.horizontal, count: 100, span: 30, spacing: 0)
+                            .minimumScaleFactor(0.5)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+
                         Divider()
                         
                         TextField("Value", text: $parameters[index].value, axis: .vertical)
-                            .lineLimit(1...3).textInputAutocapitalization(.never)
+                            .lineLimit(1...3)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
                     }
                 }
             }
