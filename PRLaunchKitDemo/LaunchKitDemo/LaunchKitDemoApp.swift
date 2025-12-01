@@ -22,5 +22,6 @@ struct LaunchKitDemoApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: CommandPreset.self)
     }
 }
