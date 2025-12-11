@@ -12,7 +12,7 @@ struct GeneralCommandView: View {
     @Query(sort: [SortDescriptor(\CommandPreset.updatedAt, order: .reverse)]) private var presets: [CommandPreset]
     @State private var command = ""
     @State private var parameters: [(name: String, value: String)] = Array(repeating: ("", ""), count: Self.parameterLimit)
-    @State private var selectedPresetID: UUID?
+    @State private var selectedPresetName: String?
     @State private var isPresentingSaveSheet = false
     @State private var pendingPresetName = ""
     @State private var isShowingSaveError = false
@@ -34,13 +34,13 @@ struct GeneralCommandView: View {
                     Text("No presets saved yet")
                         .foregroundStyle(.secondary)
                 } else {
-                    Picker("Preset", selection: self.$selectedPresetID) {
+                    Picker("Preset", selection: self.$selectedPresetName) {
                         Text("Select preset")
-                            .tag(UUID?.none)
+                            .tag(String?.none)
 
-                        ForEach(self.presets, id: \.id) { preset in
+                        ForEach(self.presets, id: \.name) { preset in
                             Text(preset.name)
-                                .tag(Optional(preset.id))
+                                .tag(Optional(preset.name))
                         }
                     }
                 }
@@ -90,8 +90,8 @@ struct GeneralCommandView: View {
             }
         }
         .navigationTitle("Generic Command")
-        .onChange(of: self.selectedPresetID) { _, newValue in
-            self.loadPresetIfNeeded(id: newValue)
+        .onChange(of: self.selectedPresetName) { _, newValue in
+            self.loadPresetIfNeeded(name: newValue)
         }
         .sheet(isPresented: self.$isPresentingSaveSheet) {
             NavigationStack {
@@ -134,7 +134,6 @@ struct GeneralCommandView: View {
         let trimmedName = self.pendingPresetName.trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard !trimmedName.isEmpty else {
-
             return
         }
 
@@ -149,7 +148,7 @@ struct GeneralCommandView: View {
                 parameters: parameterPayload,
                 timestamp: timestamp
             )
-            self.selectedPresetID = existingPreset.id
+            self.selectedPresetName = existingPreset.name
         } else {
             let preset = CommandPreset(
                 name: trimmedName,
@@ -158,7 +157,7 @@ struct GeneralCommandView: View {
                 updatedAt: timestamp
             )
             self.modelContext.insert(preset)
-            self.selectedPresetID = preset.id
+            self.selectedPresetName = preset.name
         }
 
         do {
@@ -170,10 +169,9 @@ struct GeneralCommandView: View {
         }
     }
 
-    private func loadPresetIfNeeded(id: UUID?) {
-        guard let presetID = id,
-              let preset = self.presets.first(where: { $0.id == presetID }) else {
-
+    private func loadPresetIfNeeded(name: String?) {
+        guard let presetName = name,
+              let preset = self.presets.first(where: { $0.name == presetName }) else {
             return
         }
 
