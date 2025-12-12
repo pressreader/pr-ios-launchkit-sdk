@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Open Games",
+        "command": "games",
+        "parameters": []
+    },
+    {
+        "name": "Open Magazines",
+        "command": "publications",
+        "parameters": [
+            { "name": "section", "value": "6" }
+        ]
+    },
+    {
+        "name": "Open Newspapers",
+        "command": "publications",
+        "parameters": [
+            { "name": "section", "value": "7" }
+        ]
+    },
+    {
+        "name": "Open Featured",
+        "command": "publications",
+        "parameters": [
+            { "name": "section", "value": "0" }
+        ]
+    },
+    {
+        "name": "Open Favorites",
+        "command": "publications",
+        "parameters": [
+            { "name": "section", "value": "3" }
+        ]
+    },
+    {
+        "name": "Open Recently Read",
+        "command": "publications",
+        "parameters": [
+            { "name": "section", "value": "4" }
+        ]
+    },
+    {
+        "name": "Open Downloads",
+        "command": "downloaded",
+        "parameters": []
+    },
+    {
+        "name": "Open Home Feed",
+        "command": "homefeed",
+        "parameters": []
+    },
+    {
+        "name": "Find Hotspot",
+        "command": "findhotspot",
+        "parameters": []
+    },
+    {
+        "name": "Sign In",
+        "command": "sign-in",
+        "parameters": []
+    },
+    {
+        "name": "Sign In with email",
+        "command": "sign-in",
+        "parameters": [{"name": "userName", "value": ""}]
+    },
+    {
+        "name": "Sign In with Apple",
+        "command": "sign-in",
+        "parameters": [{"name": "provider", "value": "apple"}]
+    }
+]
