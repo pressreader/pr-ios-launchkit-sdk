@@ -18,6 +18,16 @@ struct GeneralCommandView: View {
     @State private var isShowingSaveError = false
     @State private var saveErrorMessage = ""
     private static let parameterLimit = 4
+    private var normalizedParameters: [(name: String, value: String)] {
+        self.parameters
+            .map {
+                (
+                    name: $0.name.trimmingCharacters(in: .whitespacesAndNewlines),
+                    value: $0.value.trimmingCharacters(in: .whitespacesAndNewlines)
+                )
+            }
+            .filter { !$0.name.isEmpty || !$0.value.isEmpty }
+    }
 
     var body: some View {
         Form {
@@ -137,9 +147,7 @@ struct GeneralCommandView: View {
             return
         }
 
-        let parameterPayload = self.parameters
-            .map { (name: $0.name.trimmingCharacters(in: .whitespacesAndNewlines), value: $0.value) }
-            .filter { !$0.name.isEmpty || !$0.value.isEmpty }
+        let parameterPayload = self.normalizedParameters
         let timestamp = Date()
 
         if let existingPreset = self.presets.first(where: { $0.name.compare(trimmedName, options: .caseInsensitive) == .orderedSame }) {
@@ -187,7 +195,7 @@ struct GeneralCommandView: View {
     private func launchApp() {
         var args: [String: String] = [:]
 
-        for param in self.parameters where !param.name.isEmpty {
+        for param in self.normalizedParameters where !param.name.isEmpty {
             args[param.name] = param.value
         }
 
